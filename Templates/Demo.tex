@@ -1,0 +1,49 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{Preamble}
+
+\begin{document}
+
+\title{一个简单的\LaTeX{}模板}
+\author{黄德恒 \\ huangdeheng@gmail.com}
+\date
+
+\maketitle
+
+\contentsname
+\tableofcontents
+
+\section{\chuhao 夸张的初号}
+\song{我是传说中的}Troy^\ref{fig:NinjaTurtle}
+
+
+\section{\erhao 华丽的二号}
+\begin{lstlisting}[language=C]
+int main(int argc, char ** argv)
+{
+/* print a string "Hello world!" */
+printf("Hello world!\n"); // Troy
+
+return 0;
+}
+\end{lstlisting}
+
+\section{\sanhao 淡定的三号}
+\begin{figure}[htbp]               % 控制插图位置
+	\setlength{\abovecaptionskip}{0pt}   
+	\setlength{\belowcaptionskip}{10pt}
+                                     % 控制图形和上下文的距离
+	\centering                       % 使图形居中显示
+	\includegraphics[width=0.5\textwidth]{img/NinjaTurtle.jpg}
+                                     % 控制图形显示宽度为0.8\textwidth
+	\caption{忍者神龟} \label{fig:NinjaTurtle}
+                                     % 图形题目和交叉引用标签
+\end{figure}
+
+\appendix{}
+
+\bibliography{bibdb}
+\bibliographystyle{plain}
+
+
+\end{document}
